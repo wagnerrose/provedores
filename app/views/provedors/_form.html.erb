@@ -1,0 +1,49 @@
+<%= form_for(@provedor) do |f| %>
+  <% if @provedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@provedor.errors.count, "error") %> prohibited this provedor from being saved:</h2>
+
+      <ul>
+      <% @provedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uf %><br>
+    <%= f.text_field :uf %>
+  </div>
+  <div class="field">
+    <%= f.label :municipio %><br>
+    <%= f.text_field :municipio %>
+  </div>
+  <div class="field">
+    <%= f.label :microRegiao %><br>
+    <%= f.text_field :microRegiao %>
+  </div>
+  <div class="field">
+    <%= f.label :razaoSocial %><br>
+    <%= f.text_field :razaoSocial %>
+  </div>
+  <div class="field">
+    <%= f.label :numAto %><br>
+    <%= f.text_field :numAto %>
+  </div>
+  <div class="field">
+    <%= f.label :termo %><br>
+    <%= f.text_field :termo %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br>
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

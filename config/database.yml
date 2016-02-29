@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+
+development:
+  <<: *default
+  database: provedores_development
+  username: wagner
+  password: bela1010
+
+test:
+  <<: *default
+  database: provedores_test
+  username: wagner
+  password: bela1010
+
+production:
+  <<: *default
+  database: provedores_production
+  username: wagner
+  password: bela1010 
